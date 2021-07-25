@@ -1,1 +1,8 @@
-<%= @User.inspect %>
+<%= @User.profile.first_name %>
+<%= @User.profile.last_name %>
+<%= @User.profile.job_title %>
+<% if current_user.plan.id == 2 %>
+  <%= @User.profile.phone_number %><br/>
+  <%= @User.profile.contact_email %><br/>
+<% end %>
+<%= @User.profile.description %>
